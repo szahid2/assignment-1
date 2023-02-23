@@ -1,1 +1,19 @@
 # assignment-1
+For this assignment, I searched up the most efficient ways to complete the given tasks. I was unsure of how I would write some things in java, although I had the pseudocode pretty much completed. I used https://techvidvan.com/tutorials/read-csv-file-in-java/ to remember how to read the CSV file. 
+In figuring out how to sort the tags alphabetically to break the ties, I used https://www.baeldung.com/java-sort-list-alphabetically. Through this, it made sense to use the sollections.sort way to categorize the tags.I created arrays for the tags as well as for the tag counts to order how many occurrences each one had in the data set. 
+I used https://www.geeksforgeeks.org/java-filereader-class-close-method-with-examples/ to make sure the file gets closed after being read.
+I used https://stackoverflow.com/questions/18306270/skip-first-line-while-reading-csv-file-in-java to skip the header row and read the rest of the csv file.
+I used https://stackoverflow.com/questions/25779970/how-to-find-the-least-and-most-common-name-in-an-arraylist-in-java to find the least popular and most popular movies using the tags in the file. For both the least and most popular 3 movies in each section, I used a for-loop from that stack overflow question that iterates through the file, looking for the top and lowest 3 movies.
+Within the for-loops for both the most and least popular movies, I used binarySearch that I learned from  https://www.freecodecamp.org/news/how-to-use-arrays-binarysearch-in-java/ to return the index for the tags that are needed, and this finds the count or the amount of occurrences to determine the 3 highest and lowest movies.
+For the ascending and descending order of the tags by count, I used an ArrayList as shown in http://www.java2s.com/Questions_And_Answers/Java-File/CSV-file/Sort.htm which I did similarly to the least and most popular tags task.
+For the user input, I tried using cases and switch which I learned from https://docs.oracle.com/javase/tutorial/java/nutsandbolts/switch.html. This is meant to work for when the user enters the tag count and the tags with that amount are shown, as well as when the user enters a tag name and the number of occurrences for that tag are displayed. The third case I made is for when the user input is not a valid tag or number.
+For reading the csv file, the algorithm uses listTags which is an array list containing the strings from the csv file. Linear search is used in the while loop, where the tags are added and the tag counts are updated. The running time is O(n^2) where n is the number of lines being iterating through in the array through linear search.
+For listing the least and most popular tags, the implementation uses binary search. The top three occurrences are gotten through finding the highest counts from the data in the csv file. The least popular are found with the lowest occurrences similarly. The running time is O(log2n) because the top and lowest are found after that many executions.
+Finding tags by count and counts by name is done through binary search as well, by iterating through the values of each tag count and comparing how they rank against each other. I think the run time would be the same as previously mentioned.
+As of now, the file is running after about 15 seconds but the correct highest 3 and lowest 3 movies are not displaying correctly. If I enter a random number in the user input, I get my error message of "Try again, that was invalid." I did not get enough time to debug everything, but there seems to be an issue with how I have my functions finding the tag counts and comparing them with one another in order. There seems to be an issue with my buff.readLine, but the output still displays. I tried changing some things around but it gave way different incorrect outputs so I reverted to the previous result of giving tag counts of 0 and displaying the same three tags for the highest and lowest movies by count. 
+
+
+
+
+
+
